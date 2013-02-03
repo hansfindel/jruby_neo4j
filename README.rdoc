@@ -1,8 +1,19 @@
 == Welcome
 
-JRuby
-  JRuby is an implementation of the Ruby programming language atop the Java Virtual Machine, written largely in Java. It is free software released under a three-way CPL/GPL/LGPL license. JRuby is tightly integrated with Java to allow the embedding of the interpreter into any Java application with full two-way access between the Java and the Ruby code (similar to Jython for the Python language). 
-  JRuby has been able to run the Ruby on Rails web framework since version 0.9 (May 2006),[9][10] with the ability to execute RubyGems and WEBrick. Since the hiring of the two lead developers by Sun, Rails compatibility and speed have improved greatly. JRuby version 1.0 successfully passed nearly all of Rails' own test cases. Since then, developers have begun to use JRuby for Rails applications in production environments. [Wikipedia]
+= JRuby
 
-Neo4j
-  Neo4j is an open-source graph database, implemented in Java. The developers describe Neo4j as "embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables". Neo4j is the most popular graph database. [Wikipedia]
+  JRuby is an implementation of the Ruby programming language atop the Java Virtual Machine, written largely in Java. 
+  It is free software released under a three-way CPL/GPL/LGPL license. JRuby is tightly integrated with Java to allow
+  the embedding of the interpreter into any Java application with full two-way access between the Java and the Ruby code
+  (similar to Jython for the Python language). 
+  
+  JRuby has been able to run the Ruby on Rails web framework since version 0.9 (May 2006),[9][10] with the ability to 
+  execute RubyGems and WEBrick. Since the hiring of the two lead developers by Sun, Rails compatibility and speed have 
+  improved greatly. JRuby version 1.0 successfully passed nearly all of Rails' own test cases. Since then, developers 
+  have begun to use JRuby for Rails applications in production environments. [Wikipedia]
+
+= Neo4j
+  
+  Neo4j is an open-source graph database, implemented in Java. The developers describe Neo4j as "embedded, disk-based, 
+  fully transactional Java persistence engine that stores data structured in graphs rather than in tables". Neo4j is the 
+  most popular graph database. [Wikipedia]
