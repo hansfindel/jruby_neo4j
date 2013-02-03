@@ -8,8 +8,8 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #web server
-#gem "puma"
-gem "trinidad"
+gem "puma"
+#gem "trinidad"
 
 #gem 'jruby-openssl'
 gem "jruby-openssl", :platforms => :jruby
