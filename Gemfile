@@ -48,6 +48,8 @@ gem 'bcrypt-ruby', :require => "bcrypt"
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'honeybadger' 
+
 group :development, :test do
   gem "rspec-rails"
 end
