@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '1.8.7', :engine => 'jruby', :engine_version => '1.6.6'
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'puma'
 
 gem 'jruby-openssl'
 gem 'json'
@@ -23,7 +24,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'heroku'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bcrypt-ruby', :require => "bcrypt"
