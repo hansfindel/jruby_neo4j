@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-#ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.2'
+ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.2'
 #ruby '1.8.7', :engine => 'jruby', :engine_version => '1.6.6'
 gem 'rails', '3.2.11'
 
@@ -9,7 +9,7 @@ gem 'rails', '3.2.11'
 
 #web server
 #gem "puma"
-gem "trinidad"
+#gem "trinidad"
 
 #gem 'jruby-openssl'
 gem "jruby-openssl", :platforms => :jruby
