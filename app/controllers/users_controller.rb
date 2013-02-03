@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def signup
     @user = User.new
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render "users/new" }
       format.json { render :json => @user }
     end
   end

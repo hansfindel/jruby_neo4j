@@ -26,6 +26,8 @@ class User < Neo4j::Rails::Model
   validates :email, :uniqueness => true #, :unless => :pending_account?
   validates :username, :presence => true, :format   => { :with => username_regex }
   validates :username, :uniqueness => true #, :unless => :pending_account?
+  validates :password, :presence   => true, :on => :create
+  validates :password, :length     => { :within => 4..42 }, :on => :create
   #accepts_nested_attributes_for :avatar, :allow_destroy => true
 
 
