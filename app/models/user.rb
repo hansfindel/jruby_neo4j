@@ -1,13 +1,13 @@
 class User < Neo4j::Rails::Model
-  property :username, :type => String
-  property :email, :type => String
+  #property :username, :type => String
+  #property :email, :type => String
   property :password_hash, :type => String
   property :password_salt, :type => String
   property :pending_account, :type => String
 
   # add an exact lucene index on the email property
-  property :email, :index => :exact
-  property :username, :index => :exact
+  property :email, :index => :exact, :unique => true
+  property :username, :index => :exact, :unique => true
 
   def to_param
     username.parameterize
