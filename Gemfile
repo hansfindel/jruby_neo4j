@@ -1,13 +1,18 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-ruby '1.8.7', :engine => 'jruby', :engine_version => '1.6.6'
+#ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.2'
+#ruby '1.8.7', :engine => 'jruby', :engine_version => '1.6.6'
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'puma'
 
-gem 'jruby-openssl'
+#web server
+#gem "puma"
+gem "trinidad"
+
+#gem 'jruby-openssl'
+gem "jruby-openssl", :platforms => :jruby
 gem 'json'
 
 # Gems used only for assets and not required
