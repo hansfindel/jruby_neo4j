@@ -12,6 +12,8 @@ gem 'rails', '3.2.11'
 #gem "unicorn"  #set with 3 workers on production #problems with C-related dependencies
 #gem "puma"
 #gem "trinidad"
+gem "puma", group: :production
+
 
 #gem 'jruby-openssl'
 gem "jruby-openssl", :platforms => :jruby
