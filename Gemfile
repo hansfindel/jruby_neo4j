@@ -11,7 +11,7 @@ gem 'rails', '3.2.11'
 #gem "thin" #problems with C-related dependencies
 #gem "unicorn"  #set with 3 workers on production #problems with C-related dependencies
 #gem "puma"
-gem "trinidad"
+#gem "trinidad"
 
 #gem 'jruby-openssl'
 gem "jruby-openssl", :platforms => :jruby
@@ -55,6 +55,7 @@ group :development, :test do
 end
 
 gem "neo4j", ">= 2.2.3"
+gem 'neo4j-admin'
 gem "neo4j-community"
 gem "neo4j-advanced" 
 gem "neo4j-enterprise"

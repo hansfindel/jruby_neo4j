@@ -8,6 +8,8 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
 require 'neo4j'
+require "neo4j-admin/railtie"
+require 'neo4j/rails/ha_console/railtie' if Rails.env.development?
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -53,7 +55,7 @@ module Neo4jTestApp
     end
 
     # Configure where the neo4j database should exist
-    config.neo4j.storage_path = "#{config.root}/db/neo4j-#{Rails.env}"
+    config.neo4j.storage_path = "#{config.root}/db/neo4j-#{Rails.env}" if Rails.env == "development"
     config.neo4j.identity_map = false
     config.neo4j.timestamps = false  # disable automatic timestamps on updated_at and created_at properties
 
