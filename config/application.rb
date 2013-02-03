@@ -9,7 +9,7 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 require 'neo4j'
 require "neo4j-admin/railtie"
-require 'neo4j/rails/ha_console/railtie' if Rails.env.development?
+#require 'neo4j/rails/ha_console/railtie' if Rails.env.development?
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
