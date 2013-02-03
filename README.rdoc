@@ -15,5 +15,5 @@
 = Neo4j
   
   Neo4j is an open-source graph database, implemented in Java. The developers describe Neo4j as "embedded, disk-based, 
-  fully transactional Java persistence engine that stores data structured in graphs rather than in tables". Neo4j is the 
-  most popular graph database. [Wikipedia]
+  fully transactional Java persistence engine that stores data structured in graphs rather than in tables". Neo4j is 
+  the most popular graph database. [Wikipedia]

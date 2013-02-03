@@ -1,0 +1,41 @@
+<div id="user-nav" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<div class="nav-collapse collapse">	
+			  	<ul class="nav nav-pills pull-right">
+					<% if current_user %>
+						<li>
+							<%= link_to current_user do %> 
+								<i class="icon-user"></i> 
+								<%= current_user.username %> 
+							<% end %>  
+						</li>  	 	  	
+						<li>
+							<%= link_to root_path do %> 
+								<i class="icon-home"></i> 
+								Home
+							<% end %>  
+						</li>  
+						<li>
+							<%= link_to logout_path do %>  
+								<i class="icon-off"></i> 
+								Log out
+							<% end %>
+						</li>  
+						<li>	
+							<%= link_to "Users", users_path %>
+						</li>  
+					<% else %>
+						<li>
+							<%= link_to "Sign up", signup_path %> 
+						</li>
+						<li>
+							<%= link_to "Log in", login_path %> 
+						</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>	
+	

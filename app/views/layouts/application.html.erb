@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Neo4jTestApp</title>
+  <title>Me blogs too!</title>
+  <meta http-equiv = "Content-Type" content = "text/html;charset=iso-8859-1">
+  <meta name = "Me blogs too">
+  <meta name = "keywords" content = "Blogs, <%= content_for?(:keywords) ? yield(:keywords) : "Tags" %>">
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render "layouts/header" %>
+
+<div class="container">
+	<div class="jumbotron subhead">
+	  <h3 class="muted"> Me blogs too! </h3>
+	</div>
+	<%= yield %>
+</div>
 
 </body>
 </html>

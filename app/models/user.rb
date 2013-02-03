@@ -16,8 +16,8 @@ class User < Neo4j::Rails::Model
   before_save  :encrypt_password
   #after_create :set_pending
 
-  attr_accessor :password
-  attr_accessible :email, :username, :password, :password_confirmation, :pending_account
+  attr_accessor :password, :login
+  attr_accessible :email, :username, :password, :login, :pending_account
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   username_regex = /\A[\w+\-.]/i  
@@ -54,6 +54,30 @@ class User < Neo4j::Rails::Model
 		self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
 	end
   end
-
+  def self.find_login(thing)
+ 		if thing && thing.include?("@")
+ 			user=User.where("email like ?",thing.downcase).first
+ 		elsif thing
+ 			user=User.find_by_username(thing)
+ 		end
+ 		user
+ 	end
+  def self.authenticate(login, password)
+ 		user = User.find_login(login)
+ 		
+ 		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+ 			return user
+ 		elsif user # this is for users who created or want to login from a smartphone -> starts with capital 
+ 			pass = password.capitalize
+ 			pass2 = password[0,1].downcase.to_s + password[1, password.length].to_s
+ 			if user.password_hash == BCrypt::Engine.hash_secret(pass, user.password_salt) || user.password_hash == BCrypt::Engine.hash_secret(pass2, user.password_salt)
+ 				return user
+ 			else
+ 				return nil
+ 			end
+ 		else
+ 			nil
+ 		end
+ 	end
 
 end

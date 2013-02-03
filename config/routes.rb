@@ -1,10 +1,13 @@
 Neo4jTestApp::Application.routes.draw do
-  root :to => "users#index"
+  root :to => "welcome#index"
   resources :users do 
     get "confirm", :on => :member
   end
-  
 
+  get "signup" => "users#signup", :as => "signup"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  post "log_in" => "sessions#create", :as => "connect"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

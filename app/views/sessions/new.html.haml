@@ -1,0 +1,13 @@
+.login_form
+	= form_tag connect_path, :class => "form-signin" do
+		.form_title_container
+			%h2.form-signin-heading Please sign in
+			%h4 If you already have an account
+		%ul
+			%li.field_container
+				= text_field_tag :login, params[:login], :class=>"text_field", :placeholder => "username or email"
+			%li.field_container
+				= password_field_tag :password, params[:password], :class=>"text_field", :placeholder => "password"
+			%li.field_container
+				= submit_tag "Sign in", :class => "btn btn-large btn-primary"
+		.clear
