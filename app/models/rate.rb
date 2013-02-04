@@ -2,6 +2,8 @@ class Rate < Neo4j::Rails::Relationship
   property :grade, :type => Fixnum
   property :comment, :type => String
 
+  attr_accessor :grade, :comment
+  attr_accessible :grade, :comment
 
 # this is necessary to be able to make forms with the form_for helper
   def to_key
