@@ -13,6 +13,9 @@ class User < Neo4j::Rails::Model
     username.parameterize
   end
 
+  has_n(:articles).to(Article).relationship(Rate)
+  has_n(:articles).to(Article).relationship(Write)
+
   before_save  :encrypt_password
   #after_create :set_pending
 

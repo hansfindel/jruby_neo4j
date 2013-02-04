@@ -1,4 +1,7 @@
 Neo4jTestApp::Application.routes.draw do
+  resources :articles
+
+
   root :to => "welcome#index"
   resources :users do 
     get "confirm", :on => :member

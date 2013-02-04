@@ -5,7 +5,7 @@ group :development do
 	ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.2'
 end
 group :production do 
-	ruby '1.9.2', :engine => 'jruby', :engine_version => '1.7.2'
+	#ruby '1.9.2', :engine => 'jruby', :engine_version => '1.7.2'
 end 
 #ruby '1.8.7', :engine => 'jruby', :engine_version => '1.6.6'
 gem 'rails', '3.2.11'
